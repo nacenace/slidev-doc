@@ -50,11 +50,13 @@ hideInToc: false
 ---
 layout: index
 indexEntries:
-  - { title: "Curated cover image for Slidev", uri: 4 }
+  - { title: "", uri: 4 }
   - { title: "Curated cover image for Slidev", uri: 5 }
 ---
 
-# index
+# 当下进度
+
+TBDTBDTBD
 
 `index` used as list of figures
 
@@ -66,10 +68,6 @@ figureUrl: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
 # figure
-
-<Footnotes separator>
-  <Footnote :number=1><a href="https://unsplash.com/collections/94734566/slidev" rel="noreferrer" target="_blank">Anthony Fu</a></Footnote>
-</Footnotes>
 
 ---
 layout: figure-side
@@ -105,7 +103,7 @@ class: "text-center"
 </Footnotes>
 
 ---
-layout: center
+layout: full
 class: "text-center"
 ---
 
@@ -114,9 +112,9 @@ class: "text-center"
 <span class="font-extralight">Enabled by default</span>
 
 <img
-  class="absolute transform rotate-z-180 -top-0.9 -right-21.5 w-36"
-  src="/box.svg"
-/>
+ class="absolute transform rotate-z-180 -top-0.9 -right-21.5 w-36"
+ src="/box.svg"
+ />
 
 <p class="absolute font-extralight right-14 transform rotate-8 top-4">Here!</p>
 
