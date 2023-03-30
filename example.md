@@ -44,6 +44,7 @@ info: |
 layout: index
 indexEntries:
   - { title: "", uri: 3 }
+  - { title: "符号表逻辑结构", uri: 6 }
 ---
 
 # 目录
