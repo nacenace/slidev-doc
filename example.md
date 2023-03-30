@@ -12,8 +12,8 @@ fonts:
 themeConfig:
   paginationX: r
   paginationY: t
-  paginationPagesDisabled: [1]
-title: slidev-theme-academic
+  paginationPagesDiabled: [1]
+title: 中期检查报告
 info: |
   # slidev-theme-academic
 
@@ -45,7 +45,7 @@ layout: table-of-contents
 hideInToc: false
 ---
 
-# table-of-contents
+# 目录
 
 ---
 layout: index
