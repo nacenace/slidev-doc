@@ -103,13 +103,56 @@ class: "text-center"
 </Footnotes>
 
 ---
-layout: full
+layout: default
 class: "text-center"
 ---
 
 # Pagination
 
-<span class="font-extralight">Enabled by default</span>
+<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
+
+```mermaid {theme: `neutral`, scale: 0.6}
+graph TD;
+  GlobalST[全局符号表] -- parent --> null;
+  GlobalST -- 包含 --> Zero;
+  GlobalST -- 包含 --> int;
+  GlobalST -- 包含 --> x;
+  GlobalST -- 包含 --> y;
+  GlobalST -- 包含 --> prog;
+
+  Zero[符号项: ZERO] -- dataType --> const-int;
+  Zero -- storageType --> 常量;
+  Zero -- value --> 0;
+
+  int[符号项: int] -- parent --> MainST;
+  int -- dataType --> integer;
+  int -- storageType --> 变量;
+
+  x[符号项: x] -- parent --> MainST;
+  x -- dataType --> int;
+  x -- storageType --> 变量;
+
+  y[符号项: y] -- parent --> MainST;
+  y -- dataType --> int;
+  y -- storageType --> 变量;
+
+  prog[符号项: prog] -- parent --> MainST;
+  prog -- dataType --> program;
+  prog -- storageType --> 过程;
+
+  MainST[程序主体的局部符号表] -- parent --> prog;
+  i[符号项: i] -- dataType --> int;
+  i -- storageType --> 变量;
+  i -- parent --> MainST;
+
+  ifStmt[符号项: if语句] -- parent --> MainST;
+  ifStmt -- dataType --> if语句;
+  ifStmt -- storageType --> 控制结构;
+  ifStmt -- 包含 --> x;
+  ifStmt -- 包含 --> y;
+```
+
+</div>
 
 <img
  class="absolute transform rotate-z-180 -top-0.9 -right-21.5 w-36"
