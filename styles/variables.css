@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
+
+:root {
+  --slidev-font-sans: 'Noto Sans SC', sans-serif;
+}
